@@ -1,0 +1,1354 @@
+[
+  {
+    "id": "frontal-yuklagich",
+    "name": "Frontal yuklagich",
+    "category": "maxsus",
+    "description": "Qurilish maydonlarida yuk ortish va tashish ishlariga mo‘ljallangan g‘ildirakli yuklagich. Parametrlari aniqlashtiriladi.",
+    "image": "assets/images/catalog/frontal-yuklagich.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Фронтальный погрузчик",
+        "description": "Техника для строительных и земляных работ. Точную модель и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Wheel loader",
+        "description": "Equipment for construction and earthworks. Confirm model and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3824.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-001",
+    "catalog_number": 1,
+    "is_sample_image": true
+  },
+  {
+    "id": "komatsu-ekskavator",
+    "name": "Komatsu ekskavatori",
+    "category": "maxsus",
+    "description": "Yer qazish va qurilish maydonidagi texnika ishlari uchun gusenitsali ekskavator. Model va mavjudligi tasdiqlanadi.",
+    "image": "assets/images/catalog/komatsu-ekskavator.webp",
+    "specs": [
+      "Suratda ko‘rsatilgan marka: Komatsu"
+    ],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Экскаватор Komatsu",
+        "description": "Техника для строительных и земляных работ. Точную модель и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Komatsu excavator",
+        "description": "Equipment for construction and earthworks. Confirm model and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3825.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-002",
+    "catalog_number": 2,
+    "is_sample_image": true
+  },
+  {
+    "id": "liebherr-avtokran",
+    "name": "Liebherr LTM 1300-6.2 avtokran",
+    "category": "maxsus",
+    "description": "Yirik qurilish obyektlarida yuk ko‘tarish ishlari uchun mobil avtokran.",
+    "image": "assets/images/catalog/liebherr-avtokran.webp",
+    "specs": [
+      "Suratda ko‘rsatilgan model: LTM 1300-6.2"
+    ],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Автокран Liebherr LTM 1300-6.2",
+        "description": "Мобильный кран для подъёма грузов на строительных объектах."
+      },
+      "en": {
+        "name": "Liebherr LTM 1300-6.2 mobile crane",
+        "description": "Mobile crane for lifting loads at construction sites."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3826.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-003",
+    "catalog_number": 3,
+    "is_sample_image": true
+  },
+  {
+    "id": "ural-samosval",
+    "name": "Ural samosval",
+    "category": "maxsus",
+    "description": "Qurilish materiallarini tashish uchun yuk mashinasi turi. Xizmat hududi va mavjudlik filial orqali tasdiqlanadi.",
+    "image": "assets/images/catalog/ural-samosval.webp",
+    "specs": [
+      "Suratda ko‘rsatilgan marka: Ural"
+    ],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Самосвал Урал",
+        "description": "Техника для строительных и земляных работ. Точную модель и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Ural dump truck",
+        "description": "Equipment for construction and earthworks. Confirm model and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3823.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-004",
+    "catalog_number": 4,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3659",
+    "name": "Betonarez apparati",
+    "category": "kesish",
+    "description": "Beton va qattiq materiallarni kesish uchun betonarez apparati.",
+    "image": "assets/images/catalog/uskuna-3659.webp",
+    "source_photo": "IMG_3659.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 350000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Аппарат для резки бетона",
+        "description": "Инструмент для резки подходящих материалов. Модель и характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Concrete cutting machine",
+        "description": "Equipment for cutting suitable materials. Confirm the model and specifications with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3659.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-005",
+    "catalog_number": 5,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3668",
+    "name": "Burchakli arra — tortsovka",
+    "category": "kesish",
+    "description": "Yog‘och va boshqa mos materiallarni burchak ostida kesishga mo‘ljallangan statsionar arra.",
+    "image": "assets/images/catalog/uskuna-3668.webp",
+    "source_photo": "IMG_3668.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Торцовочная пила",
+        "description": "Инструмент для резки подходящих материалов. Модель и характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Mitre saw",
+        "description": "Equipment for cutting suitable materials. Confirm the model and specifications with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3668.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-006",
+    "catalog_number": 6,
+    "is_sample_image": false
+  },
+  {
+    "id": "diskli-beton-kesgich",
+    "name": "Shtrabarez — devor kesgich",
+    "category": "kesish",
+    "description": "Devorda kabel va quvurlar uchun shtraba (kanal) ochadigan devor kesgich — shtrabarez.",
+    "image": "assets/images/catalog/shtrabarez-devor-kesgich.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 250000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Штроборез (стенорез)",
+        "description": "Штроборез для прорезания штроб в стенах под кабели и трубы. Наличие и условия аренды уточняйте у оператора."
+      },
+      "en": {
+        "name": "Wall chaser",
+        "description": "Wall chaser for cutting channels in walls for cables and pipes. Confirm availability with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "isnet-cutout-white-bg",
+    "sku": "OKA-007",
+    "catalog_number": 7,
+    "is_sample_image": true
+  },
+  {
+    "id": "bolgarka-125-180-230",
+    "name": "Bolgarka 125 / 180 / 230",
+    "category": "kesish",
+    "description": "Kesish va silliqlash ishlari uchun uch xil o‘lchamdagi bolgarka (125, 180 va 230 mm). Kerakli o‘lchamni so‘rov paytida ayting.",
+    "image": "assets/images/catalog/bolgarka-125-180-230.webp",
+    "source_photo": "ref-bolgarka-125-180-230.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 60000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Болгарка 125 / 180 / 230",
+        "description": "Углошлифовальные машины (болгарки) трёх размеров: 125, 180 и 230 мм. Нужный размер укажите в запросе."
+      },
+      "en": {
+        "name": "Angle grinders 125 / 180 / 230",
+        "description": "Angle grinders in three sizes (125, 180 and 230 mm) for cutting and grinding. Tell us the size you need in your request."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-008",
+    "catalog_number": 8,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3663",
+    "name": "Plitkarez 120",
+    "category": "kesish",
+    "description": "Plitka va keramik materiallarni kesish uchun qo‘lda ishlatiladigan plitkarez. Katta o‘lchamli plitkalar uchun qulay.",
+    "image": "assets/images/catalog/plitkarez-120.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 140000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Плиткорез 120",
+        "description": "Ручной плиткорез для резки плитки и керамики. Удобен для плитки большого формата. Наличие уточняйте у оператора."
+      },
+      "en": {
+        "name": "Tile cutter 120",
+        "description": "Manual tile cutter for tiles and ceramics, suited to large-format tiles. Confirm availability with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "isnet-cutout-white-bg",
+    "sku": "OKA-009",
+    "catalog_number": 9,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3684",
+    "name": "Qo‘l frezeri",
+    "category": "kesish",
+    "description": "Yog‘ochni ishlashda kesish va shakl berish uchun qo‘l frezeri.",
+    "image": "assets/images/catalog/uskuna-3684.webp",
+    "source_photo": "IMG_3684.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 70000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Ручной фрезер",
+        "description": "Инструмент для резки подходящих материалов. Модель и характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Handheld router",
+        "description": "Equipment for cutting suitable materials. Confirm the model and specifications with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3684.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-010",
+    "catalog_number": 10,
+    "is_sample_image": true
+  },
+  {
+    "id": "tortsovka-polkali",
+    "name": "Tortsovka s polkoy (stolli)",
+    "category": "kesish",
+    "description": "Yog‘och va profillarni burchak ostida kesish uchun stolli (polkali) tortsovka arra. Modeli aniqlashtiriladi.",
+    "image": "assets/images/catalog/tortsovka-polkali.webp",
+    "source_photo": "ref-tortsovka-polkali.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 160000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Торцовочная пила с полкой (столом)",
+        "description": "Торцовочная пила со столом для распила древесины и профилей под углом. Модель уточняйте у оператора."
+      },
+      "en": {
+        "name": "Miter saw with table",
+        "description": "Miter saw with a work table for angled cuts in wood and profiles. Confirm the model with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-011",
+    "catalog_number": 11,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3680",
+    "name": "ZEROMAX CUT-45 plazma kesgichi",
+    "category": "kesish",
+    "description": "Metallni plazma yordamida kesish uchun uskuna.",
+    "image": "assets/images/catalog/uskuna-3680.webp",
+    "source_photo": "IMG_3680.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Плазморез ZEROMAX CUT-45",
+        "description": "Оборудование для плазменной резки металла."
+      },
+      "en": {
+        "name": "ZEROMAX CUT-45 plasma cutter",
+        "description": "Equipment for plasma cutting of metal."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3680.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-012",
+    "catalog_number": 12,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3675",
+    "name": "Elektr arra",
+    "category": "kesish",
+    "description": "Yog‘och kesish ishlari uchun elektr zanjirli arra.",
+    "image": "assets/images/catalog/elektr-arra.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 120000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Электропила",
+        "description": "Электрическая цепная пила для распиловки древесины. Наличие уточняйте у оператора."
+      },
+      "en": {
+        "name": "Electric chainsaw",
+        "description": "Electric chainsaw for cutting wood. Confirm availability with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "isnet-cutout-white-bg",
+    "sku": "OKA-013",
+    "catalog_number": 13,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3681",
+    "name": "Zanjirli arra",
+    "category": "kesish",
+    "description": "Yog‘och materiallar bilan ishlash uchun zanjirli arra.",
+    "image": "assets/images/catalog/uskuna-3681.webp",
+    "source_photo": "IMG_3681.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 120000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Цепная пила",
+        "description": "Цепная пила для распиловки древесины."
+      },
+      "en": {
+        "name": "Chainsaw",
+        "description": "Chainsaw for cutting wood."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3681.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-014",
+    "catalog_number": 14,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3676",
+    "name": "Perforator max",
+    "category": "burgulash",
+    "description": "Kuchli perforator. Qattiq materiallarni burg‘ulash va buzish ishlarida ishlatiladi.",
+    "image": "assets/images/catalog/uskuna-3676.webp",
+    "source_photo": "IMG_3676.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 90000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Отбойный перфоратор",
+        "description": "Инструмент для бурения или демонтажных работ. Комплектацию и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Demolition rotary hammer",
+        "description": "Tool for drilling or demolition tasks. Confirm accessories and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3676.webp"
+    ],
+    "image_process": "previously-prepared",
+    "sku": "OKA-015",
+    "catalog_number": 15,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3650",
+    "name": "Beton buzish bolg‘asi",
+    "category": "burgulash",
+    "description": "Beton va boshqa qattiq materiallarni buzish uchun otboynik malatok.",
+    "image": "assets/images/catalog/uskuna-3650.webp",
+    "source_photo": "IMG_3650.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 170000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Отбойный молоток",
+        "description": "Инструмент для бурения или демонтажных работ. Комплектацию и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Demolition hammer",
+        "description": "Tool for drilling or demolition tasks. Confirm accessories and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3650.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-016",
+    "catalog_number": 16,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3682",
+    "name": "Buzish bolg‘asi (11 kg)",
+    "category": "burgulash",
+    "description": "11 kg toifadagi buzish bolg‘asi. Ustki buzish va demontaj ishlarida qo‘llanadi.",
+    "image": "assets/images/catalog/uskuna-3682.webp",
+    "source_photo": "IMG_3682.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 150000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Отбойный молоток 11 кг",
+        "description": "Инструмент для бурения или демонтажных работ. Комплектацию и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Demolition hammer (11 kg)",
+        "description": "Tool for drilling or demolition tasks. Confirm accessories and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3682.webp"
+    ],
+    "image_process": "clean-original",
+    "sku": "OKA-017",
+    "catalog_number": 17,
+    "is_sample_image": true
+  },
+  {
+    "id": "almaznoy-bur",
+    "name": "Almaznoy bur (stanokli)",
+    "category": "burgulash",
+    "description": "Beton va g‘isht devorlarda katta diametrli teshik ochish uchun stanokli almaz burg‘ulash uskunasi. Bur diametri va quvvati aniqlashtiriladi.",
+    "image": "assets/images/catalog/almaznoy-bur.webp",
+    "source_photo": "ref-almaznoy-bur.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 250000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Алмазное бурение (со станиной)",
+        "description": "Установка алмазного бурения на станине для сверления отверстий в бетоне и кирпиче. Диаметр коронки и мощность уточняйте."
+      },
+      "en": {
+        "name": "Diamond core drill with stand",
+        "description": "Diamond core drilling rig on a stand for making holes in concrete and brick. Confirm bit diameter and power."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-018",
+    "catalog_number": 18,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3673",
+    "name": "Perforator mini",
+    "category": "burgulash",
+    "description": "Yengil toifadagi perforator. Kichik burg‘ulash va montaj ishlari uchun qulay.",
+    "image": "assets/images/catalog/uskuna-3673.webp",
+    "source_photo": "IMG_3673.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 60000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Перфоратор",
+        "description": "Инструмент для бурения или демонтажных работ. Комплектацию и наличие уточняйте в филиале."
+      },
+      "en": {
+        "name": "Rotary hammer",
+        "description": "Tool for drilling or demolition tasks. Confirm accessories and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3673.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-019",
+    "catalog_number": 19,
+    "is_sample_image": false
+  },
+  {
+    "id": "motobur",
+    "name": "Motobur (yer qazish uchun)",
+    "category": "burgulash",
+    "description": "Tuproqda quduq va ustunlar uchun teshik ochishda ishlatiladigan benzinli motobur. Suratda STAR EA520 ko‘rinadi; burg‘i diametri aniqlashtiriladi.",
+    "image": "assets/images/catalog/motobur.webp",
+    "source_photo": "ref-motobur.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 150000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Мотобур (бензобур) для земляных работ",
+        "description": "Бензиновый мотобур для бурения отверстий в грунте под столбы и колодцы. На фото модель STAR EA520; диаметр шнека уточняйте."
+      },
+      "en": {
+        "name": "Petrol earth auger",
+        "description": "Petrol-powered auger for drilling holes in soil for posts and wells. The photo shows a STAR EA520; confirm auger diameter."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-020",
+    "catalog_number": 20,
+    "is_sample_image": true
+  },
+  {
+    "id": "armatura-bukish",
+    "name": "Armatura bukish stanogi",
+    "category": "beton",
+    "description": "Armatura elementlarini bukish uchun mo‘ljallangan stanok. Texnik imkoniyatlari va ijara shartlari aniqlashtiriladi.",
+    "image": "assets/images/catalog/armatura-bukish.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Станок для гибки арматуры",
+        "description": "Оборудование для работы с бетоном и строительными смесями. Характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Rebar bending machine",
+        "description": "Equipment for concrete work and building mixes. Confirm specifications with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3822.webp"
+    ],
+    "image_process": "ai-retouched-reference",
+    "sku": "OKA-021",
+    "catalog_number": 21,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3660",
+    "name": "Beton silliqlash vertolyoti",
+    "category": "beton",
+    "description": "Beton pol va styashka yuzasini tekislash hamda silliqlash uchun vertalyot.",
+    "image": "assets/images/catalog/uskuna-3660.webp",
+    "source_photo": "IMG_3660.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 350000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Затирочная машина по бетону",
+        "description": "Оборудование для работы с бетоном и строительными смесями. Характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Concrete power trowel",
+        "description": "Equipment for concrete work and building mixes. Confirm specifications with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3660.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-022",
+    "catalog_number": 22,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3653",
+    "name": "Qorishma aralashtirgichi (mikser)",
+    "category": "beton",
+    "description": "Qurilish qorishmalari, bo‘yoq va suyuq aralashmalarni aralashtirish uchun qo‘l mikseri.",
+    "image": "assets/images/catalog/uskuna-3653.webp",
+    "source_photo": "IMG_3653.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 120000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Строительный миксер",
+        "description": "Оборудование для работы со строительными смесями. Характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Construction mixer",
+        "description": "Equipment for building mixes. Confirm specifications with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3653.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-023",
+    "catalog_number": 23,
+    "is_sample_image": false
+  },
+  {
+    "id": "atlas-copco-katok",
+    "name": "Atlas Copco LP6500 katok",
+    "category": "zichlash",
+    "description": "Maydonlarni zichlash ishlari uchun ko‘chma valetsli zichlash texnikasi. Mavjudligi tasdiqlanadi.",
+    "image": "assets/images/catalog/atlas-copco-katok.webp",
+    "specs": [
+      "Suratda ko‘rsatilgan model: LP6500"
+    ],
+    "reference_image": true,
+    "price_per_day": 450000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Виброкаток Atlas Copco LP6500",
+        "description": "Техника для уплотнения грунта и основания. Модель и наличие нужно подтвердить."
+      },
+      "en": {
+        "name": "Atlas Copco LP6500 vibratory roller",
+        "description": "Equipment for soil and base compaction. Model and availability need confirmation."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3821.webp"
+    ],
+    "image_process": "ai-retouched-reference",
+    "sku": "OKA-024",
+    "catalog_number": 24,
+    "is_sample_image": true
+  },
+  {
+    "id": "denzel-vibroplita",
+    "name": "Trambovka vibroplita",
+    "category": "zichlash",
+    "description": "Zichlash ishlarida ishlatiladigan vibroplita.",
+    "image": "assets/images/catalog/denzel-vibroplita.webp",
+    "specs": [
+      "Suratda ko‘rsatilgan marka: Denzel"
+    ],
+    "reference_image": true,
+    "price_per_day": 350000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Виброплита Denzel",
+        "description": "Техника для уплотнения грунта и основания. Модель и наличие нужно подтвердить."
+      },
+      "en": {
+        "name": "Denzel plate compactor",
+        "description": "Equipment for soil and base compaction. Model and availability need confirmation."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3820.webp"
+    ],
+    "image_process": "ai-retouched-reference",
+    "sku": "OKA-025",
+    "catalog_number": 25,
+    "is_sample_image": true
+  },
+  {
+    "id": "narvon-3-6",
+    "name": "Narvon 3–6 m",
+    "category": "boshqa",
+    "description": "Balandlikdagi ishlar uchun alyuminiy ikki seksiyali narvon (3–6 m). Aniq o‘lchamni so‘rov paytida ayting.",
+    "image": "assets/images/catalog/narvon-3-6.webp",
+    "source_photo": "ref-narvon-3-6.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Лестница 3–6 м",
+        "description": "Алюминиевая двухсекционная лестница для работ на высоте (3–6 м). Точный размер укажите в запросе."
+      },
+      "en": {
+        "name": "Ladder 3–6 m",
+        "description": "Two-section aluminium ladder (3–6 m) for work at height. Tell us the exact size you need."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-026",
+    "catalog_number": 26,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3661",
+    "name": "Trambovka kenguru — tokli",
+    "category": "zichlash",
+    "description": "Elektr/tokli kenguru trambovka. Mayda zichlash ishlarida qo‘llanadi.",
+    "image": "assets/images/catalog/trambovka-kenguru-tokli.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 350000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Вибротрамбовка «Кенгуру» (электрическая)",
+        "description": "Вибротрамбовка для уплотнения грунта и основания. Наличие уточняйте у оператора."
+      },
+      "en": {
+        "name": "Electric rammer compactor",
+        "description": "Rammer compactor for soil and base compaction. Confirm availability with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "isnet-cutout-white-bg",
+    "sku": "OKA-027",
+    "catalog_number": 27,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3669",
+    "name": "Vibrotrambovka",
+    "category": "zichlash",
+    "description": "Yer va to‘ldirma asoslarni zichlash uchun vertikal zarbali uskuna.",
+    "image": "assets/images/catalog/uskuna-3669.webp",
+    "source_photo": "IMG_3669.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 350000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Вибротрамбовка",
+        "description": "Техника для уплотнения грунта и основания. Модель и наличие нужно подтвердить."
+      },
+      "en": {
+        "name": "Rammer compactor",
+        "description": "Equipment for soil and base compaction. Model and availability need confirmation."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3669.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-028",
+    "catalog_number": 28,
+    "is_sample_image": false
+  },
+  {
+    "id": "svarka-220v",
+    "name": "Payvandlash apparati (svarka) 220 V",
+    "category": "payvandlash",
+    "description": "220 V tarmoqdan ishlaydigan payvandlash apparati (svarka). Suratda Wester TIG 220 ko‘rinadi; texnik ko‘rsatkichlari aniqlashtiriladi.",
+    "image": "assets/images/catalog/svarka-220v.webp",
+    "source_photo": "ref-svarka-220v.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 85000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Сварочный аппарат 220 В",
+        "description": "Сварочный аппарат для работы от сети 220 В. На фото Wester TIG 220; характеристики уточняйте у оператора."
+      },
+      "en": {
+        "name": "Welding machine 220 V",
+        "description": "Welding machine for 220 V mains. The photo shows a Wester TIG 220; confirm specifications with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-029",
+    "catalog_number": 29,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3666",
+    "name": "Devor silliqlash mashinasi",
+    "category": "silliqlash",
+    "description": "Uzun dastali, changyutgich shlangli devor va shiftni silliqlash mashinasi (jirafa). Shpaklyovka va suvoqdan keyin yuzani tekislash uchun.",
+    "image": "assets/images/catalog/uskuna-3666.webp",
+    "source_photo": "IMG_3666.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 120000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Шлифовальная машина для стен и потолков",
+        "description": "Шлифовальная машина на длинной штанге с пылесосным шлангом (жираф) для шлифовки стен и потолков после шпаклёвки."
+      },
+      "en": {
+        "name": "Drywall and wall sander",
+        "description": "Long-reach wall and ceiling sander with a dust hose (giraffe type) for smoothing surfaces after plastering."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3666.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-030",
+    "catalog_number": 30,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3687",
+    "name": "Kärcher SE 5 yuvuvchi changyutgichi",
+    "category": "tozalash",
+    "description": "Gilam va qoplamalarni yuvib tozalash uchun changyutgich.",
+    "image": "assets/images/catalog/uskuna-3687.webp",
+    "source_photo": "IMG_3687.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 150000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Моющий пылесос Kärcher SE 5",
+        "description": "Моющий пылесос для ковров и мягких покрытий."
+      },
+      "en": {
+        "name": "Kärcher SE 5 wet vacuum",
+        "description": "Wet vacuum cleaner for carpets and upholstery."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3687.webp"
+    ],
+    "image_process": "yellow-poster-extraction",
+    "sku": "OKA-031",
+    "catalog_number": 31,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3664",
+    "name": "Pol yuvish apparati",
+    "category": "tozalash",
+    "description": "Polni mexanik cho‘tka yordamida tozalash uchun mo‘ljallangan ko‘chma uskuna.",
+    "image": "assets/images/catalog/uskuna-3664.webp",
+    "source_photo": "IMG_3664.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Поломоечная машина",
+        "description": "Оборудование для уборки и очистки. Уточните комплект и наличие в филиале."
+      },
+      "en": {
+        "name": "Floor scrubber",
+        "description": "Cleaning equipment. Confirm accessories and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3664.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-032",
+    "catalog_number": 32,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3667",
+    "name": "Sanoat changyutgichi",
+    "category": "tozalash",
+    "description": "Qurilish maydoni va ustaxona uchun sanoat plisos.",
+    "image": "assets/images/catalog/uskuna-3667.webp",
+    "source_photo": "IMG_3667.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 150000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Промышленный пылесос",
+        "description": "Оборудование для уборки и очистки. Уточните комплект и наличие в филиале."
+      },
+      "en": {
+        "name": "Industrial vacuum cleaner",
+        "description": "Cleaning equipment. Confirm accessories and availability with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3667.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-033",
+    "catalog_number": 33,
+    "is_sample_image": false
+  },
+  {
+    "id": "karcher-220-bar",
+    "name": "Karcher bosimli yuvish apparati (220 bar)",
+    "category": "tozalash",
+    "description": "220 bar bosimli g‘ildirakli Karcher yuvish apparati. Texnika, fasad va maydonlarni yuvish uchun.",
+    "image": "assets/images/catalog/karcher-220-bar.webp",
+    "source_photo": "ref-karcher-220-bar.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 250000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Мойка высокого давления Karcher (220 бар)",
+        "description": "Мойка высокого давления Karcher на колёсах, 220 бар. Для мойки техники, фасадов и площадок."
+      },
+      "en": {
+        "name": "Karcher pressure washer (220 bar)",
+        "description": "Wheeled Karcher pressure washer, 220 bar, for washing machinery, facades and yards."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-034",
+    "catalog_number": 34,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3670",
+    "name": "Havo kompressori",
+    "category": "kompressor",
+    "description": "Siqilgan havo bilan ishlaydigan asboblar uchun kompressor; hajm va bosim ma’lumotlari aniqlanadi.",
+    "image": "assets/images/catalog/uskuna-3670.webp",
+    "source_photo": "IMG_3670.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 85000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Воздушный компрессор",
+        "description": "Компрессорное оборудование. Модель, давление и наличие уточняйте у оператора."
+      },
+      "en": {
+        "name": "Air compressor",
+        "description": "Compressor equipment. Confirm model, pressure and availability with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3670.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-035",
+    "catalog_number": 35,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3679",
+    "name": "ZEROMAX kompressori",
+    "category": "kompressor",
+    "description": "Siqilgan havo olish uchun ZEROMAX brendli kompressor; model va quvvat aniqlashtiriladi.",
+    "image": "assets/images/catalog/uskuna-3679.webp",
+    "source_photo": "IMG_3679.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 85000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Компрессор ZEROMAX",
+        "description": "Компрессорное оборудование. Модель, давление и наличие уточняйте у оператора."
+      },
+      "en": {
+        "name": "ZEROMAX compressor",
+        "description": "Compressor equipment. Confirm model, pressure and availability with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3679.webp"
+    ],
+    "image_process": "clean-original",
+    "sku": "OKA-036",
+    "catalog_number": 36,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3672",
+    "name": "Generator 4 kVt",
+    "category": "elektr",
+    "description": "Elektr tarmog‘i bo‘lmagan joylarda vaqtinchalik elektr ta’minoti uchun benzinli generator.",
+    "image": "assets/images/catalog/generator-4kvt.webp",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 250000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Бензиновый генератор 4 кВт",
+        "description": "Бензиновый генератор для временного электроснабжения там, где нет сети. Наличие уточняйте у оператора."
+      },
+      "en": {
+        "name": "Petrol generator 4 kW",
+        "description": "Petrol generator for temporary power where there is no mains supply. Confirm availability with staff."
+      }
+    },
+    "additional_images": [],
+    "image_process": "isnet-cutout-white-bg",
+    "sku": "OKA-037",
+    "catalog_number": 37,
+    "is_sample_image": true
+  },
+  {
+    "id": "generator-10-kvt",
+    "name": "Generator 10 kVt",
+    "category": "elektr",
+    "description": "Elektr ta’minoti kerak bo‘lgan joylar uchun ko‘chma generator.",
+    "image": "assets/images/catalog/generator-10-kvt.webp",
+    "source_photo": "ref-generator-10-kvt.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 350000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Бензиновый генератор 10 кВт",
+        "description": "Переносной генератор для временного электроснабжения."
+      },
+      "en": {
+        "name": "Petrol generator 10 kW",
+        "description": "Portable generator for temporary power supply."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-038",
+    "catalog_number": 38,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3685",
+    "name": "CRAFT kuchlanish stabilizatori",
+    "category": "elektr",
+    "description": "Elektr qurilmalarini kuchlanish o‘zgarishidan himoyalash uchun stabilizator.",
+    "image": "assets/images/catalog/uskuna-3685.webp",
+    "source_photo": "IMG_3685.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "additional_images": [
+      "assets/images/products/IMG_3685.webp",
+      "assets/images/products/IMG_3686.webp"
+    ],
+    "i18n": {
+      "ru": {
+        "name": "Стабилизатор напряжения CRAFT",
+        "description": "Стабилизатор напряжения для защиты электрооборудования."
+      },
+      "en": {
+        "name": "CRAFT voltage stabilizer",
+        "description": "Voltage stabilizer for protecting electrical equipment."
+      }
+    },
+    "image_process": "approx-background-removal",
+    "sku": "OKA-039",
+    "catalog_number": 39,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3678",
+    "name": "Vagner apparati",
+    "category": "boyash",
+    "description": "Bo‘yoq purkash uchun Vagner turidagi apparat.",
+    "image": "assets/images/catalog/uskuna-3678.webp",
+    "source_photo": "IMG_3678.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 300000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Краскораспылитель — 1",
+        "description": "Оборудование для покрасочных работ. Уточните модель и условия аренды."
+      },
+      "en": {
+        "name": "Paint sprayer — 1",
+        "description": "Painting equipment. Confirm model and rental terms with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3678.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-040",
+    "catalog_number": 40,
+    "is_sample_image": false
+  },
+  {
+    "id": "payka-dazmol",
+    "name": "Payka (dazmol)",
+    "category": "payvandlash",
+    "description": "Plastik quvurlarni ulash (payvandlash) uchun payka apparati: qizdirgich va turli diametrli nasadkalar to‘plami bilan. Suratda EMTOP komplekti ko‘rinadi; diametrlar aniqlashtiriladi.",
+    "image": "assets/images/catalog/payka-dazmol.webp",
+    "source_photo": "ref-payka-dazmol.jpg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Паяльник для пластиковых труб (утюг)",
+        "description": "Аппарат для сварки пластиковых труб с нагревателем и набором насадок разных диаметров. На фото комплект EMTOP; диаметры уточняйте."
+      },
+      "en": {
+        "name": "Plastic pipe welding iron",
+        "description": "Plastic pipe welding iron with a heater and a set of heads of different diameters. The photo shows an EMTOP kit; confirm diameters."
+      }
+    },
+    "additional_images": [],
+    "image_process": "Reference photo supplied by owner; background whitened and fitted to 1000x750 catalog frame",
+    "sku": "OKA-041",
+    "catalog_number": 41,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3656",
+    "name": "Isitish pushkasi 5 kVt",
+    "category": "isitish",
+    "description": "Ish joyi yoki qurilish obyektlarini isitishda foydalaniladigan ko‘chma apparat.",
+    "image": "assets/images/catalog/uskuna-3656.webp",
+    "source_photo": "IMG_3656.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": 65000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Электрическая тепловая пушка",
+        "description": "Оборудование для обогрева. Уточните характеристики и наличие у оператора."
+      },
+      "en": {
+        "name": "Electric space heater",
+        "description": "Heating equipment. Confirm specifications and availability with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3656.webp"
+    ],
+    "image_process": "clean-original",
+    "sku": "OKA-042",
+    "catalog_number": 42,
+    "is_sample_image": true
+  },
+  {
+    "id": "uskuna-3654",
+    "name": "Gazli isitish uskunasi",
+    "category": "isitish",
+    "description": "Qurilish va ish joylarini isitishda foydalaniladigan gazli uskuna.",
+    "image": "assets/images/catalog/uskuna-3654.webp",
+    "source_photo": "IMG_3654.jpeg",
+    "specs": [],
+    "reference_image": true,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Газовый обогреватель",
+        "description": "Газовый обогреватель для строительных и рабочих зон."
+      },
+      "en": {
+        "name": "Gas heater",
+        "description": "Gas heater for construction and work areas."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3654.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-043",
+    "catalog_number": 43,
+    "is_sample_image": true
+  },
+  {
+    "id": "piter-elektr-isitgich",
+    "name": "PITER elektr isitkichlari",
+    "category": "isitish",
+    "description": "Ish joylari va qurilish binolarini isitish uchun elektr uskunalar.",
+    "image": "assets/images/catalog/piter-elektr-isitgich.webp",
+    "specs": [
+      "Rasmda 3 ta uskuna ko‘rsatilgan"
+    ],
+    "reference_image": false,
+    "price_per_day": 65000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Электрообогреватели PITER",
+        "description": "Электрические обогреватели для рабочих и строительных помещений."
+      },
+      "en": {
+        "name": "PITER electric heaters",
+        "description": "Electric heaters for work and construction spaces."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3827.webp"
+    ],
+    "image_process": "ai-retouched-reference",
+    "sku": "OKA-044",
+    "catalog_number": 44,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3651",
+    "name": "BEGA airless purkagich",
+    "category": "boyash",
+    "description": "G‘ildirakli airless (yuqori bosimli) bo‘yoq purkash apparati. Devor va fasadlarni bo‘yash uchun.",
+    "image": "assets/images/catalog/uskuna-3651.webp",
+    "source_photo": "IMG_3651.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": 250000,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Безвоздушный краскопульт BEGA",
+        "description": "Оборудование для покрасочных работ. Уточните модель и условия аренды."
+      },
+      "en": {
+        "name": "BEGA airless paint sprayer",
+        "description": "Painting equipment. Confirm model and rental terms with the branch."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3651.webp"
+    ],
+    "image_process": "Retouched source photograph in clean catalog frame; machine not altered",
+    "sku": "OKA-045",
+    "catalog_number": 45,
+    "is_sample_image": false
+  },
+  {
+    "id": "uskuna-3662",
+    "name": "Shtrabarez — 2",
+    "category": "kesish",
+    "description": "Devorda kabel va quvurlar uchun shtraba (kanal) ochadigan devor kesgich, ikkinchi model.",
+    "image": "assets/images/catalog/uskuna-3662.webp",
+    "source_photo": "IMG_3662.jpeg",
+    "specs": [],
+    "reference_image": false,
+    "price_per_day": null,
+    "demo": false,
+    "availability": "Mavjudligini aniqlashtiring",
+    "i18n": {
+      "ru": {
+        "name": "Штроборез — 2",
+        "description": "Штроборез для прорезания штроб в стенах под кабели и трубы. Наличие и условия аренды уточняйте у оператора."
+      },
+      "en": {
+        "name": "Wall chaser — 2",
+        "description": "Wall chaser for cutting channels in walls for cables and pipes. Confirm availability with staff."
+      }
+    },
+    "additional_images": [
+      "assets/images/products/IMG_3662.webp"
+    ],
+    "image_process": "approx-background-removal",
+    "sku": "OKA-046",
+    "catalog_number": 46,
+    "is_sample_image": false
+  }
+]

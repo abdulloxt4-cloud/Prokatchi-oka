@@ -1,0 +1,416 @@
+[
+  {
+    "number": 1,
+    "id": "frontal-yuklagich",
+    "name": "Frontal yuklagich",
+    "source": "assets/images/products/IMG_3824.webp",
+    "catalog_image": "assets/images/catalog/frontal-yuklagich.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-001"
+  },
+  {
+    "number": 2,
+    "id": "komatsu-ekskavator",
+    "name": "Komatsu ekskavatori",
+    "source": "assets/images/products/IMG_3825.webp",
+    "catalog_image": "assets/images/catalog/komatsu-ekskavator.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-002"
+  },
+  {
+    "number": 3,
+    "id": "liebherr-avtokran",
+    "name": "Liebherr LTM 1300-6.2 avtokran",
+    "source": "assets/images/products/IMG_3826.webp",
+    "catalog_image": "assets/images/catalog/liebherr-avtokran.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-003"
+  },
+  {
+    "number": 4,
+    "id": "ural-samosval",
+    "name": "Ural samosval",
+    "source": "assets/images/products/IMG_3823.webp",
+    "catalog_image": "assets/images/catalog/ural-samosval.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-004"
+  },
+  {
+    "number": 5,
+    "id": "uskuna-3659",
+    "name": "Betonarez apparati",
+    "source": "assets/images/products/IMG_3659.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3659.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-005"
+  },
+  {
+    "number": 6,
+    "id": "uskuna-3668",
+    "name": "Burchakli arra — tortsovka",
+    "source": "assets/images/products/IMG_3668.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3668.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-006"
+  },
+  {
+    "number": 7,
+    "id": "diskli-beton-kesgich",
+    "name": "Shtrabarez — devor kesgich",
+    "source": "user-supplied catalog photo",
+    "catalog_image": "assets/images/catalog/shtrabarez-devor-kesgich.webp",
+    "processing": "isnet-cutout-white-bg",
+    "sku": "OKA-007"
+  },
+  {
+    "number": 8,
+    "id": "bolgarka-125-180-230",
+    "name": "Bolgarka 125 / 180 / 230",
+    "source": "assets/images/products/ref-bolgarka-125-180-230.jpg",
+    "catalog_image": "assets/images/catalog/bolgarka-125-180-230.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-008"
+  },
+  {
+    "number": 9,
+    "id": "uskuna-3663",
+    "name": "Plitkarez 120",
+    "source": "user-supplied catalog photo",
+    "catalog_image": "assets/images/catalog/plitkarez-120.webp",
+    "processing": "isnet-cutout-white-bg",
+    "sku": "OKA-009"
+  },
+  {
+    "number": 10,
+    "id": "uskuna-3684",
+    "name": "Qo‘l frezeri",
+    "source": "assets/images/products/IMG_3684.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3684.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-010"
+  },
+  {
+    "number": 11,
+    "id": "tortsovka-polkali",
+    "name": "Tortsovka s polkoy (stolli)",
+    "source": "assets/images/products/ref-tortsovka-polkali.jpg",
+    "catalog_image": "assets/images/catalog/tortsovka-polkali.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-011"
+  },
+  {
+    "number": 12,
+    "id": "uskuna-3680",
+    "name": "ZEROMAX CUT-45 plazma kesgichi",
+    "source": "assets/images/products/IMG_3680.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3680.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-012"
+  },
+  {
+    "number": 13,
+    "id": "uskuna-3675",
+    "name": "Elektr arra",
+    "source": "user-supplied catalog photo",
+    "catalog_image": "assets/images/catalog/elektr-arra.webp",
+    "processing": "isnet-cutout-white-bg",
+    "sku": "OKA-013"
+  },
+  {
+    "number": 14,
+    "id": "uskuna-3681",
+    "name": "Zanjirli arra",
+    "source": "assets/images/products/IMG_3681.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3681.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-014"
+  },
+  {
+    "number": 15,
+    "id": "uskuna-3676",
+    "name": "Perforator max",
+    "source": "assets/images/products/IMG_3676.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3676.webp",
+    "processing": "previously-prepared",
+    "sku": "OKA-015"
+  },
+  {
+    "number": 16,
+    "id": "uskuna-3650",
+    "name": "Beton buzish bolg‘asi",
+    "source": "assets/images/products/IMG_3650.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3650.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-016"
+  },
+  {
+    "number": 17,
+    "id": "uskuna-3682",
+    "name": "Buzish bolg‘asi (11 kg)",
+    "source": "assets/images/products/IMG_3682.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3682.webp",
+    "processing": "clean-original",
+    "sku": "OKA-017"
+  },
+  {
+    "number": 18,
+    "id": "almaznoy-bur",
+    "name": "Almaznoy bur (stanokli)",
+    "source": "assets/images/products/ref-almaznoy-bur.jpg",
+    "catalog_image": "assets/images/catalog/almaznoy-bur.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-018"
+  },
+  {
+    "number": 19,
+    "id": "uskuna-3673",
+    "name": "Perforator mini",
+    "source": "assets/images/products/IMG_3673.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3673.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-019"
+  },
+  {
+    "number": 20,
+    "id": "motobur",
+    "name": "Motobur (yer qazish uchun)",
+    "source": "assets/images/products/ref-motobur.jpg",
+    "catalog_image": "assets/images/catalog/motobur.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-020"
+  },
+  {
+    "number": 21,
+    "id": "armatura-bukish",
+    "name": "Armatura bukish stanogi",
+    "source": "assets/images/products/IMG_3822.webp",
+    "catalog_image": "assets/images/catalog/armatura-bukish.webp",
+    "processing": "ai-retouched-reference",
+    "sku": "OKA-021"
+  },
+  {
+    "number": 22,
+    "id": "uskuna-3660",
+    "name": "Beton silliqlash vertolyoti",
+    "source": "assets/images/products/IMG_3660.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3660.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-022"
+  },
+  {
+    "number": 23,
+    "id": "uskuna-3653",
+    "name": "Qorishma aralashtirgichi (mikser)",
+    "source": "assets/images/products/IMG_3653.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3653.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-023"
+  },
+  {
+    "number": 24,
+    "id": "atlas-copco-katok",
+    "name": "Atlas Copco LP6500 katok",
+    "source": "assets/images/products/IMG_3821.webp",
+    "catalog_image": "assets/images/catalog/atlas-copco-katok.webp",
+    "processing": "ai-retouched-reference",
+    "sku": "OKA-024"
+  },
+  {
+    "number": 25,
+    "id": "denzel-vibroplita",
+    "name": "Trambovka vibroplita",
+    "source": "assets/images/products/IMG_3820.webp",
+    "catalog_image": "assets/images/catalog/denzel-vibroplita.webp",
+    "processing": "ai-retouched-reference",
+    "sku": "OKA-025"
+  },
+  {
+    "number": 26,
+    "id": "narvon-3-6",
+    "name": "Narvon 3–6 m",
+    "source": "assets/images/products/ref-narvon-3-6.jpg",
+    "catalog_image": "assets/images/catalog/narvon-3-6.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-026"
+  },
+  {
+    "number": 27,
+    "id": "uskuna-3661",
+    "name": "Trambovka kenguru — tokli",
+    "source": "user-supplied catalog photo",
+    "catalog_image": "assets/images/catalog/trambovka-kenguru-tokli.webp",
+    "processing": "isnet-cutout-white-bg",
+    "sku": "OKA-027"
+  },
+  {
+    "number": 28,
+    "id": "uskuna-3669",
+    "name": "Vibrotrambovka",
+    "source": "assets/images/products/IMG_3669.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3669.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-028"
+  },
+  {
+    "number": 29,
+    "id": "svarka-220v",
+    "name": "Payvandlash apparati (svarka) 220 V",
+    "source": "assets/images/products/ref-svarka-220v.jpg",
+    "catalog_image": "assets/images/catalog/svarka-220v.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-029"
+  },
+  {
+    "number": 30,
+    "id": "uskuna-3666",
+    "name": "Devor silliqlash mashinasi",
+    "source": "assets/images/products/IMG_3666.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3666.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-030"
+  },
+  {
+    "number": 31,
+    "id": "uskuna-3687",
+    "name": "Kärcher SE 5 yuvuvchi changyutgichi",
+    "source": "assets/images/products/IMG_3687.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3687.webp",
+    "processing": "yellow-poster-extraction",
+    "sku": "OKA-031"
+  },
+  {
+    "number": 32,
+    "id": "uskuna-3664",
+    "name": "Pol yuvish apparati",
+    "source": "assets/images/products/IMG_3664.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3664.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-032"
+  },
+  {
+    "number": 33,
+    "id": "uskuna-3667",
+    "name": "Sanoat changyutgichi",
+    "source": "assets/images/products/IMG_3667.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3667.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-033"
+  },
+  {
+    "number": 34,
+    "id": "karcher-220-bar",
+    "name": "Karcher bosimli yuvish apparati (220 bar)",
+    "source": "assets/images/products/ref-karcher-220-bar.jpg",
+    "catalog_image": "assets/images/catalog/karcher-220-bar.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-034"
+  },
+  {
+    "number": 35,
+    "id": "uskuna-3670",
+    "name": "Havo kompressori",
+    "source": "assets/images/products/IMG_3670.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3670.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-035"
+  },
+  {
+    "number": 36,
+    "id": "uskuna-3679",
+    "name": "ZEROMAX kompressori",
+    "source": "assets/images/products/IMG_3679.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3679.webp",
+    "processing": "clean-original",
+    "sku": "OKA-036"
+  },
+  {
+    "number": 37,
+    "id": "uskuna-3672",
+    "name": "Generator 4 kVt",
+    "source": "user-supplied catalog photo",
+    "catalog_image": "assets/images/catalog/generator-4kvt.webp",
+    "processing": "isnet-cutout-white-bg",
+    "sku": "OKA-037"
+  },
+  {
+    "number": 38,
+    "id": "generator-10-kvt",
+    "name": "Generator 10 kVt",
+    "source": "assets/images/products/ref-generator-10-kvt.jpg",
+    "catalog_image": "assets/images/catalog/generator-10-kvt.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-038"
+  },
+  {
+    "number": 39,
+    "id": "uskuna-3685",
+    "name": "CRAFT kuchlanish stabilizatori",
+    "source": "assets/images/products/IMG_3685.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3685.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-039"
+  },
+  {
+    "number": 40,
+    "id": "uskuna-3678",
+    "name": "Vagner apparati",
+    "source": "assets/images/products/IMG_3678.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3678.webp",
+    "processing": "clean-original",
+    "sku": "OKA-040"
+  },
+  {
+    "number": 41,
+    "id": "payka-dazmol",
+    "name": "Payka (dazmol)",
+    "source": "assets/images/products/ref-payka-dazmol.jpg",
+    "catalog_image": "assets/images/catalog/payka-dazmol.webp",
+    "processing": "reference-image-white-background",
+    "sku": "OKA-041"
+  },
+  {
+    "number": 42,
+    "id": "uskuna-3656",
+    "name": "Isitish pushkasi 5 kVt",
+    "source": "assets/images/products/IMG_3656.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3656.webp",
+    "processing": "clean-original",
+    "sku": "OKA-042"
+  },
+  {
+    "number": 43,
+    "id": "uskuna-3654",
+    "name": "Gazli isitish uskunasi",
+    "source": "assets/images/products/IMG_3654.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3654.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-043"
+  },
+  {
+    "number": 44,
+    "id": "piter-elektr-isitgich",
+    "name": "PITER elektr isitkichlari",
+    "source": "assets/images/products/IMG_3827.webp",
+    "catalog_image": "assets/images/catalog/piter-elektr-isitgich.webp",
+    "processing": "ai-retouched-reference",
+    "sku": "OKA-044"
+  },
+  {
+    "number": 45,
+    "id": "uskuna-3651",
+    "name": "BEGA airless purkagich",
+    "source": "assets/images/products/IMG_3651.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3651.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-045"
+  },
+  {
+    "number": 46,
+    "id": "uskuna-3662",
+    "name": "Shtrabarez — 2",
+    "source": "assets/images/products/IMG_3662.webp",
+    "catalog_image": "assets/images/catalog/uskuna-3662.webp",
+    "processing": "approx-background-removal",
+    "sku": "OKA-046"
+  }
+]

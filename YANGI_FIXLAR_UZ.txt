@@ -1,0 +1,16 @@
+PROKATCHI OKA — Layout, scroll va til ko‘rinishi tuzatishlari
+
+1. Filiallar: eski kartalar qayta klonlanmaydi. Ma’lumot kelganda faqat Gulzor va Ibn Sino uchun 2 ta karta chiziladi. Til almashganda ham takrorlanmaydi.
+2. Scroll: IntersectionObserver elementi bir marta ko‘rsatadi va kuzatishni to‘xtatadi. Kam harakatni afzal ko‘rgan foydalanuvchilarda animatsiyalar o‘chadi.
+3. Blur: og‘ir backdrop-filter, keraksiz blur va kartalardagi siljituvchi transformlar olib tashlandi.
+4. Katalog: auto-fill grid, mahsulot kartalarining teng balandligi va tugmalarning pastda tekis joylashuvi.
+5. Filtrlar: bir xil balandlikdagi tugmalar va tabiiy ko‘chish; kategoriya kartalarida sarlavha va ko‘rsatkich tekislangan.
+6. Rasmlar: 4:3 ramka, contain, bir xil neytral fon, lazy loading, namuna belgisi faqat tegishli mahsulotlarga.
+7. Kategoriyalar: Beton uchun silliqlash uskunasi, Kesish uchun alohida assets/images/categories/kesish-kategoriyasi.webp rasmi.
+8. Hero: sariq yorliq mashinalarni yopmaydigan joyga ko‘chirildi, boshqa bo‘limlarga chiqib ketmaydi.
+9. Ortiqcha bo‘shliqlar kamaytirildi; chat footerga kelganda yuqoriga joylashadi.
+10. Matnlar: texnik ichki izohlar mijozga ko‘rsatilmaydi, Telegram ID yashirilgan, noma’lum ish vaqti yashiriladi. Ayrim aralash tilli nomlar va sun’iy tavsiflar UZ/RU/EN’da soddalashtirildi.
+11. Sana: UZ KK.OO.YYYY, RU ДД.ММ.ГГГГ, EN DD/MM/YYYY. Kiritilgan sana Flask uchun YYYY-MM-DD ga aylantiriladi.
+12. Dark mode: kartalar, rasm joyi va matnlar uchun mos ranglar; tanlov localStorage’da saqlanadi.
+
+Texnik testlar fayllarni va kodni tekshiradi. Qurilmalardagi real CDN/Bootstrap hamda rasmlarning ichidagi eski artefaktlarni yakuniy ko‘rish davomida ko‘rib chiqish kerak. Bu versiya rasmlarning piksel retushini bajarmaydi.

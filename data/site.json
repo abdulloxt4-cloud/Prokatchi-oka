@@ -1,0 +1,37 @@
+{
+  "brand": "Prokatchi Oka",
+  "phone": "+998 77 701 44 17",
+  "instagram": "https://www.instagram.com/buildcity_uz/",
+  "telegram": "https://t.me/prookat24",
+  "facebook": "https://www.facebook.com/share/19G6TpvN3Q/",
+  "youtube": "https://youtube.com/@prokatuz",
+  "whatsapp": "",
+  "address": "Toshkent — Gulzor va Ibn Sino filiallari",
+  "working_hours": "",
+  "map_url": "https://maps.app.goo.gl/GSJBqhEM8vV2Fpyd7?g_st=ic",
+  "locations": [
+    {
+      "id": "gulzor",
+      "name": "Gulzor filiali",
+      "address": "Gulzor filiali — Toshkent",
+      "map_url": "https://maps.app.goo.gl/GSJBqhEM8vV2Fpyd7?g_st=ic",
+      "phones": [
+        "+998 77 701 44 17"
+      ],
+      "telegram_id": "7946053646",
+      "working_hours": ""
+    },
+    {
+      "id": "ibn-sino",
+      "name": "Ibn Sino filiali",
+      "address": "Ibn Sino filiali — Toshkent",
+      "map_url": "https://maps.app.goo.gl/QWTwW4iNCQMVJzUH8?g_st=ic",
+      "phones": [
+        "+998 99 818 24 25",
+        "+998 98 772 27 20"
+      ],
+      "telegram_id": "1137921242",
+      "working_hours": ""
+    }
+  ]
+}
