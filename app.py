@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import html
 import os
 import re
 import sqlite3
@@ -11,27 +12,38 @@ import threading
 import time
 import urllib.parse
 import urllib.request
+
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, Response, jsonify, request, send_from_directory
+
+
+# ==========================================
+# CONFIGURATION
+# ==========================================
 
 BASE = Path(__file__).resolve().parent
 INSTANCE = BASE / "instance"
 INSTANCE.mkdir(exist_ok=True)
+
 load_dotenv(BASE / ".env")
 
 app = Flask(__name__, static_folder=None)
 app.json.ensure_ascii = False
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024
 
+SEO_PAGES = {'uz': ('PROKATCHI OKA ? Qurilish asboblari va texnikasi ijarasi | Toshkent', 'Toshkentda qurilish asboblari, elektr asboblar va maxsus texnika ijarasi. PROKATCHI OKA ? Gulzor va Ibn Sino filiallari. Katalogni ko?ring va so?rov yuboring.', 'uz_UZ', 'https://prokatchioka.uz/'), 'ru': ('?????? ???????????? ? ???????????? ??????? ? ???????? | PROKATCHI OKA', '?????? ???????????? ????????????, ??????????????????? ? ??????????? ? ????????. PROKATCHI OKA ? ??????? ??????? ? ??? ????. ??????? ? ?????? ??????.', 'ru_RU', 'https://prokatchioka.uz/ru/'), 'en': ('Construction Equipment & Tool Rental in Tashkent | PROKATCHI OKA', 'Construction equipment rental and power tool hire in Tashkent. Browse the PROKATCHI OKA catalog, then contact our Gulzor or Ibn Sino branch.', 'en_US', 'https://prokatchioka.uz/en/')}
+
 DB_FILE = INSTANCE / "inquiries.sqlite3"
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()
 
 if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = "postgresql://" + DATABASE_URL[len("postgres://"):]
+    DATABASE_URL = (
+        "postgresql://" + DATABASE_URL[len("postgres://"):]
+    )
 
 if os.getenv("RENDER") and not DATABASE_URL:
     raise RuntimeError(
@@ -42,12 +54,17 @@ _last_requests: dict[str, float] = {}
 _rate_lock = threading.Lock()
 
 
+# ==========================================
 # DATABASE
+# ==========================================
 
 def db_connection():
     if DATABASE_URL:
         import psycopg
-        return psycopg.connect(DATABASE_URL, connect_timeout=10)
+        return psycopg.connect(
+            DATABASE_URL,
+            connect_timeout=10
+        )
 
     connection = sqlite3.connect(DB_FILE, timeout=5)
     connection.execute("PRAGMA busy_timeout=5000")
@@ -57,6 +74,7 @@ def db_connection():
 def db_execute(connection, sql: str, params=()):
     if DATABASE_URL:
         sql = sql.replace("?", "%s")
+
     return connection.execute(sql, params)
 
 
@@ -92,7 +110,8 @@ def initialize_database():
             """)
 
             columns = {
-                row[1] for row in connection.execute(
+                row[1]
+                for row in connection.execute(
                     "PRAGMA table_info(inquiries)"
                 )
             }
@@ -110,15 +129,58 @@ def read_json(filename):
         return json.load(file)
 
 
+# ==========================================
 # WEBSITE ROUTES
+# ==========================================
 
 @app.get("/")
+@app.get("/ru/")
+@app.get("/en/")
 def index():
-    return send_from_directory(BASE, "index.html")
+    language = {
+        "": "uz",
+        "ru": "ru",
+        "en": "en"
+    }[request.path.strip("/")]
+
+    title, description, og_locale, canonical = SEO_PAGES[language]
+    page = (BASE / "index.html").read_text(encoding="utf-8")
+
+    replacements = (
+        (r'<html lang="[^"]+">', f'<html lang="{language}">'),
+        (r'<title>[^<]*</title>', f'<title>{html.escape(title)}</title>'),
+        (r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{html.escape(description, quote=True)}">'),
+        (r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{html.escape(title, quote=True)}">'),
+        (r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{html.escape(description, quote=True)}">'),
+        (r'<meta property="og:locale" content="[^"]*">', f'<meta property="og:locale" content="{og_locale}">'),
+        (r'<meta property="og:url" content="[^"]*">', f'<meta property="og:url" content="{canonical}">'),
+        (r'<meta name="twitter:title" content="[^"]*">', f'<meta name="twitter:title" content="{html.escape(title, quote=True)}">'),
+        (r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{html.escape(description, quote=True)}">'),
+        (r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{canonical}">'),
+    )
+
+    for pattern, replacement in replacements:
+        page, count = re.subn(
+            pattern,
+            lambda _: replacement,
+            page,
+            count=1
+        )
+        if count != 1:
+            raise RuntimeError(
+                f"index.html SEO elementi topilmadi: {pattern}"
+            )
+
+    page = page.replace('src="assets/', 'src="/assets/')
+    page = page.replace('href="assets/', 'href="/assets/')
+
+    return Response(
+        page,
+        content_type="text/html; charset=utf-8"
+    )
 
 
 # GOOGLE SITEMAP
-
 @app.get("/sitemap.xml")
 def sitemap():
     return send_from_directory(
@@ -128,9 +190,20 @@ def sitemap():
     )
 
 
-# STATIC ASSETS
+# GOOGLE ROBOTS.TXT — NEW
+@app.get("/robots.txt")
+def robots():
+    return send_from_directory(
+        BASE,
+        "robots.txt",
+        mimetype="text/plain"
+    )
 
+
+# STATIC ASSETS
 @app.get("/assets/<path:filename>")
+@app.get("/ru/assets/<path:filename>")
+@app.get("/en/assets/<path:filename>")
 def assets(filename):
     return send_from_directory(
         BASE / "assets",
@@ -139,8 +212,9 @@ def assets(filename):
 
 
 # PUBLIC DATA
-
 @app.get("/data/<path:filename>")
+@app.get("/ru/data/<path:filename>")
+@app.get("/en/data/<path:filename>")
 def public_data(filename):
     if filename not in {"products.json", "site.json"}:
         return jsonify(error="Not found"), 404
@@ -152,27 +226,26 @@ def public_data(filename):
 
 
 # HEALTH CHECK
-
 @app.get("/healthz")
 def healthz():
     return jsonify(ok=True), 200
 
 
 # PRODUCTS API
-
 @app.get("/api/products")
 def products():
     return jsonify(read_json("products.json"))
 
 
 # SITE API
-
 @app.get("/api/site")
 def site():
     return jsonify(read_json("site.json"))
 
 
+# ==========================================
 # TEXT VALIDATION
+# ==========================================
 
 def clean_text(data, key, limit):
     value = data.get(key, "")
@@ -183,13 +256,37 @@ def clean_text(data, key, limit):
     return value.strip()[:limit]
 
 
-# TELEGRAM NOTIFICATIONS
+# ==========================================
+# TELEGRAM — TWO RECIPIENTS
+# ==========================================
 
 def send_telegram(payload):
     token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
-    if not token or not chat_id:
+    # Your original Telegram ID
+    primary_chat_id = os.getenv(
+        "TELEGRAM_CHAT_ID", ""
+    ).strip()
+
+    # Your friend's Telegram ID
+    secondary_chat_id = os.getenv(
+        "TELEGRAM_CHAT_ID_2", ""
+    ).strip()
+
+    # Remove empty IDs and duplicates
+    chat_ids = list(dict.fromkeys(
+        chat_id
+        for chat_id in (
+            primary_chat_id,
+            secondary_chat_id
+        )
+        if chat_id
+    ))
+
+    if not token or not chat_ids:
+        app.logger.warning(
+            "Telegram tokeni yoki chat ID sozlanmagan"
+        )
         return False
 
     lines = [
@@ -202,34 +299,54 @@ def send_telegram(payload):
         f"Izoh: {payload['message'] or 'Yo‘q'}",
     ]
 
-    body = urllib.parse.urlencode({
-        "chat_id": chat_id,
-        "text": "\n".join(lines)
-    }).encode()
+    message_text = "\n".join(lines)
+    sent_count = 0
 
-    try:
-        with urllib.request.urlopen(
-            urllib.request.Request(
+    # Send independently to each recipient
+    for recipient_number, chat_id in enumerate(
+        chat_ids, start=1
+    ):
+        body = urllib.parse.urlencode({
+            "chat_id": chat_id,
+            "text": message_text
+        }).encode("utf-8")
+
+        try:
+            telegram_request = urllib.request.Request(
                 f"https://api.telegram.org/bot{token}/sendMessage",
                 data=body,
-                method="POST",
-            ),
-            timeout=5,
-        ) as response:
-            result = json.loads(
-                response.read().decode("utf-8")
+                method="POST"
             )
 
-        return bool(result.get("ok"))
+            with urllib.request.urlopen(
+                telegram_request,
+                timeout=5
+            ) as response:
+                result = json.loads(
+                    response.read().decode("utf-8")
+                )
 
-    except (OSError, ValueError):
-        app.logger.warning(
-            "Telegram xabarnomasi yuborilmadi"
-        )
-        return False
+            if result.get("ok"):
+                sent_count += 1
+            else:
+                app.logger.warning(
+                    "Telegram %s-qabul qiluvchiga yuborilmadi",
+                    recipient_number
+                )
+
+        except (OSError, ValueError):
+            app.logger.warning(
+                "Telegram %s-qabul qiluvchiga yuborishda xatolik",
+                recipient_number
+            )
+
+    # True only if all configured recipients received it
+    return sent_count == len(chat_ids)
 
 
+# ==========================================
 # CUSTOMER INQUIRIES API
+# ==========================================
 
 @app.post("/api/inquiries")
 def create_inquiry():
@@ -247,6 +364,7 @@ def create_inquiry():
             error="Noto‘g‘ri ma’lumot."
         ), 400
 
+    # Honeypot protection
     if data.get("website"):
         return jsonify(
             ok=True,
@@ -332,10 +450,10 @@ def create_inquiry():
         "message": message
     }
 
+    # Save order to database
     with db_connection() as connection:
         statement = """
-            INSERT INTO inquiries
-            (
+            INSERT INTO inquiries (
                 created_at,
                 name,
                 phone,
@@ -370,6 +488,7 @@ def create_inquiry():
             else cursor.lastrowid
         )
 
+    # Notify both Telegram recipients
     notified = send_telegram(payload)
 
     if notified:
@@ -390,7 +509,9 @@ def create_inquiry():
     ), 201
 
 
+# ==========================================
 # ERROR HANDLER
+# ==========================================
 
 @app.errorhandler(413)
 def too_large(_):
@@ -400,11 +521,12 @@ def too_large(_):
     ), 413
 
 
+# ==========================================
 # EXPORT INQUIRIES
+# ==========================================
 
 def export_inquiries():
     initialize_database()
-
     output = INSTANCE / "inquiries.csv"
 
     with db_connection() as connection:
@@ -436,12 +558,16 @@ def export_inquiries():
     print(f"CSV fayl tayyor: {output}")
 
 
+# ==========================================
 # INITIALIZE DATABASE
+# ==========================================
 
 initialize_database()
 
 
+# ==========================================
 # START APPLICATION
+# ==========================================
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "export-inquiries":

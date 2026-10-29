@@ -1102,8 +1102,8 @@
   TABLE['So‘rovingiz operator tomonidan tasdiqlanadi.'] = {ru:'Ваш запрос будет подтверждён оператором.',en:'Your request will be confirmed by an operator.'};
   const originalNodeText = new WeakMap();
   const originalAttribute = new WeakMap();
-  let lang = 'uz';
-  try { const saved = localStorage.getItem('oka_language'); if (['uz','ru','en'].includes(saved)) lang=saved; } catch (_) {}
+  const pathLang = window.location.pathname.match(/^\/(ru|en)\/?$/);
+  let lang = pathLang ? pathLang[1] : 'uz';
   const clean = s => String(s).trim();
   const lookup = (text, target=lang) => {
     if (target === 'uz') return text;
@@ -1163,17 +1163,46 @@
       const isActive=button.dataset.lang===lang;
       button.setAttribute('aria-pressed',String(isActive));
     });
-    document.title=lookup('PROKATCHI OKA — Qurilish uskunalari ijarasi');
-    const description=document.querySelector('meta[name="description"]');
-    if(description) description.content={uz:'PROKATCHI OKA — qurilish uskunalari ijarasi. Mahsulot katalogi va 2 filial.',ru:'PROKATCHI OKA — аренда строительного оборудования. Каталог и два филиала.',en:'PROKATCHI OKA — construction equipment rental. Catalog and two branches.'}[lang];
+
+    // SEO: Uzbek, Russian and English
+    const seo={
+      uz:{
+        title:'PROKATCHI OKA ? Qurilish asboblari va texnikasi ijarasi | Toshkent',
+        description:'Toshkentda qurilish asboblari, elektr asboblar va maxsus texnika ijarasi. PROKATCHI OKA ? Gulzor va Ibn Sino filiallari. Katalogni ko?ring va so?rov yuboring.',
+        locale:'uz_UZ'
+      },
+      ru:{
+        title:'?????? ???????????? ? ???????????? ??????? ? ???????? | PROKATCHI OKA',
+        description:'?????? ???????????? ????????????, ??????????????????? ? ??????????? ? ????????. PROKATCHI OKA ? ??????? ??????? ? ??? ????. ??????? ? ?????? ??????.',
+        locale:'ru_RU'
+      },
+      en:{
+        title:'Construction Equipment & Tool Rental in Tashkent | PROKATCHI OKA',
+        description:'Construction equipment rental and power tool hire in Tashkent. Browse the PROKATCHI OKA catalog, then contact our Gulzor or Ibn Sino branch.',
+        locale:'en_US'
+      }
+    }[lang];
+
+    document.title=seo.title;
+
+    function setMeta(selector,value){
+      const meta=document.querySelector(selector);
+      if(meta) meta.setAttribute('content',value);
+    }
+
+    setMeta('meta[name="description"]',seo.description);
+    setMeta('meta[property="og:title"]',seo.title);
+    setMeta('meta[property="og:description"]',seo.description);
+    setMeta('meta[property="og:locale"]',seo.locale);
+    setMeta('meta[name="twitter:title"]',seo.title);
+    setMeta('meta[name="twitter:description"]',seo.description);
   }
   function setLang(next){
-    if(!['uz','ru','en'].includes(next))return;
-    lang=next;
-    try {localStorage.setItem('oka_language',lang)}catch(_){}
-    updateControls();
-    translateTree(document.body);
-    document.dispatchEvent(new CustomEvent('oka:languagechange',{detail:{lang}}));
+    if (!['uz','ru','en'].includes(next)) return;
+    const targetPath = next === 'uz' ? '/' : `/${next}/`;
+    if (window.location.pathname !== targetPath) {
+      window.location.assign(targetPath + window.location.hash);
+    }
   }
   window.I18N={t:lookup,original,setLang,get lang(){return lang;}};
   document.addEventListener('DOMContentLoaded',()=>{
