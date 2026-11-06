@@ -1,0 +1,12 @@
+# Optional blueprint template for a NEW Render Static Site.
+# Keep the current Python Web Service and its Neon/Telegram environment unchanged.
+# Render normally recognizes render.yaml; this file is a reference for manual setup.
+services:
+  - type: web
+    name: prokatchi-oka-frontend
+    runtime: static
+    buildCommand: python scripts/build_static.py
+    staticPublishPath: ./dist
+    envVars:
+      - key: PROKATCHI_API_URL
+        sync: false

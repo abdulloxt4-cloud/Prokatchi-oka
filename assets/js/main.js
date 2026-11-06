@@ -35,36 +35,15 @@ const formatPrice = (n) => Number.isFinite(n) && n >= 0
 
 
 const UI_TEXT = {
-  uz: {successTitle:'So‘rovingiz uchun rahmat!',successText:'So‘rovingiz qabul qilindi. Tez orada operatorimiz siz bilan aloqaga chiqadi.',successClose:'Yopish',equipmentOptional:'Uskunani tanlang (ixtiyoriy)',branchPlaceholder:'Filialni tanlang',submitSending:'Yuborilmoqda...',submitReady:'So\'rov yuborish <i class="bi bi-send"></i>',invalidPhone:'Telefon raqamni tekshiring.',mapOpen:'Google Maps’da ochish',workTime:'Ish vaqti',workUnknown:'telefon orqali aniqlang',telegramWrite:'Telegram orqali yozish',branchLabel:'FILIAL',savedOk:'So‘rovingiz saqlandi va mas’ul shaxsga Telegram xabarnomasi yuborildi.',savedNoTelegram:'So‘rovingiz serverga saqlandi. Telegram xabarnomasi hali ulanmagan — bazani tekshirish kerak.',quickHint:'Tez so‘rov: ism, telefon va kerakli uskunani qoldiring.',noAddress:'Filial joylashuvi xaritada ko‘rsatilgan'},
-  ru: {successTitle:'Спасибо за вашу заявку!',successText:'Ваша заявка принята. Наш оператор свяжется с вами в ближайшее время.',successClose:'Закрыть',equipmentOptional:'Выберите оборудование (необязательно)',branchPlaceholder:'Выберите филиал',submitSending:'Отправка...',submitReady:'Отправить запрос <i class="bi bi-send"></i>',invalidPhone:'Проверьте номер телефона.',mapOpen:'Открыть в Google Maps',workTime:'Режим работы',workUnknown:'уточняйте по телефону',telegramWrite:'Написать в Telegram',branchLabel:'ФИЛИАЛ',savedOk:'Ваш запрос сохранён, а ответственному сотруднику отправлено уведомление в Telegram.',savedNoTelegram:'Ваш запрос сохранён на сервере. Уведомление в Telegram пока не подключено — нужно проверить базу.',quickHint:'Быстрая заявка: оставьте имя, телефон и нужное оборудование.',noAddress:'Точка филиала указана на карте'},
-  en: {successTitle:'Thank you for your request!',successText:'Your request has been received. Our operator will contact you shortly.',successClose:'Close',equipmentOptional:'Select equipment (optional)',branchPlaceholder:'Select a branch',submitSending:'Sending...',submitReady:'Send request <i class="bi bi-send"></i>',invalidPhone:'Please check the phone number.',mapOpen:'Open in Google Maps',workTime:'Working hours',workUnknown:'confirm by phone',telegramWrite:'Message on Telegram',branchLabel:'BRANCH',savedOk:'Your request has been saved and a Telegram notification was sent to the responsible staff member.',savedNoTelegram:'Your request has been saved on the server. Telegram notification is not connected yet — please check the database.',quickHint:'Quick request: leave your name, phone and the equipment you need.',noAddress:'The branch location is shown on the map'}
+  uz: {successTitle:'So‘rovingiz uchun rahmat!',successText:'So‘rovingiz qabul qilindi. Tez orada operatorimiz siz bilan aloqaga chiqadi.',successClose:'Yopish',equipmentOptional:'Uskunani tanlang (ixtiyoriy)',branchPlaceholder:'Filialni tanlang',submitSending:'Yuborilmoqda...',submitReady:'So\'rov yuborish <i class="bi bi-send"></i>',invalidPhone:'Telefon raqamni tekshiring.',mapOpen:'Google Maps’da ochish',workTime:'Ish vaqti',workUnknown:'telefon orqali aniqlang',telegramWrite:'Telegram orqali yozish',branchLabel:'FILIAL',savedOk:'So‘rovingiz saqlandi va mas’ul shaxsga Telegram xabarnomasi yuborildi.',savedNoTelegram:'So‘rovingiz serverga saqlandi. Telegram xabarnomasi hali ulanmagan — bazani tekshirish kerak.',serverMayWake:'So‘rov yuborilmoqda. Server uyg‘onayotgan bo‘lsa, biroz kutish kerak bo‘lishi mumkin. Qayta bosmang.',quickHint:'Tez so‘rov: ism, telefon va kerakli uskunani qoldiring.',noAddress:'Filial joylashuvi xaritada ko‘rsatilgan'},
+  ru: {successTitle:'Спасибо за вашу заявку!',successText:'Ваша заявка принята. Наш оператор свяжется с вами в ближайшее время.',successClose:'Закрыть',equipmentOptional:'Выберите оборудование (необязательно)',branchPlaceholder:'Выберите филиал',submitSending:'Отправка...',submitReady:'Отправить запрос <i class="bi bi-send"></i>',invalidPhone:'Проверьте номер телефона.',mapOpen:'Открыть в Google Maps',workTime:'Режим работы',workUnknown:'уточняйте по телефону',telegramWrite:'Написать в Telegram',branchLabel:'ФИЛИАЛ',savedOk:'Ваш запрос сохранён, а ответственному сотруднику отправлено уведомление в Telegram.',savedNoTelegram:'Ваш запрос сохранён на сервере. Уведомление в Telegram пока не подключено — нужно проверить базу.',serverMayWake:'Отправляем заявку. Если сервер просыпается, отправка может занять некоторое время. Не нажимайте повторно.',quickHint:'Быстрая заявка: оставьте имя, телефон и нужное оборудование.',noAddress:'Точка филиала указана на карте'},
+  en: {successTitle:'Thank you for your request!',successText:'Your request has been received. Our operator will contact you shortly.',successClose:'Close',equipmentOptional:'Select equipment (optional)',branchPlaceholder:'Select a branch',submitSending:'Sending...',submitReady:'Send request <i class="bi bi-send"></i>',invalidPhone:'Please check the phone number.',mapOpen:'Open in Google Maps',workTime:'Working hours',workUnknown:'confirm by phone',telegramWrite:'Message on Telegram',branchLabel:'BRANCH',savedOk:'Your request has been saved and a Telegram notification was sent to the responsible staff member.',savedNoTelegram:'Your request has been saved on the server. Telegram notification is not connected yet — please check the database.',serverMayWake:'Submitting your request. A sleeping server may take a while to wake up. Please do not resubmit.',quickHint:'Quick request: leave your name, phone and the equipment you need.',noAddress:'The branch location is shown on the map'}
 };
 const ui = (key) => (UI_TEXT[window.I18N?.lang || 'uz'] || UI_TEXT.uz)[key] || UI_TEXT.uz[key] || '';
 
-let preloaderProgressTimer = null;
-function setPreloaderProgress(value) {
-  const bar = document.getElementById('preloaderBar');
-  if (bar) bar.style.width = `${Math.max(8, Math.min(100, value))}%`;
-}
-function startPreloader() {
-  document.body.classList.add('preloader-active');
-  setPreloaderProgress(14);
-  let progress = 14;
-  preloaderProgressTimer = window.setInterval(() => {
-    progress = Math.min(progress + (progress < 70 ? 9 : 3), 92);
-    setPreloaderProgress(progress);
-  }, 160);
-}
-function stopPreloader() {
-  if (preloaderProgressTimer) window.clearInterval(preloaderProgressTimer);
-  setPreloaderProgress(100);
-  const loader = document.getElementById('sitePreloader');
-  window.setTimeout(() => {
-    loader?.classList.add('is-hidden');
-    document.body.classList.remove('preloader-active');
-  }, 180);
-}
-
+const apiOrigin = String(window.PROKATCHI_API_URL || '').replace(/\/+$/, '');
+const isStaticFrontend = window.PROKATCHI_STATIC_SITE === true;
+const inquiryEndpoint = `${apiOrigin}/api/inquiries`;
 
 const datePlaceholders = {
   uz: {placeholder:'KK.OO.YYYY',hint:'Masalan: 27.10.2026',error:'Sanani KK.OO.YYYY shaklida kiriting.'},
@@ -117,15 +96,10 @@ function observeReveal(elements) {
   }
 }
 
-async function readData(apiPath, staticPath) {
-  for (const path of [apiPath, staticPath]) {
-    try {
-      const response = await fetch(path, { cache: 'no-store' });
-      if (!response.ok) continue;
-      return await response.json();
-    } catch (_) {  }
-  }
-  throw new Error('Ma\'lumot fayli topilmadi. Saytni Live Server yoki Flask bilan oching.');
+async function readData(staticPath) {
+  const response = await fetch(staticPath, { cache: 'default' });
+  if (!response.ok) throw new Error(`Ma'lumot yuklanmadi: ${response.status}`);
+  return await response.json();
 }
 
 function isProductImage(path) {
@@ -136,7 +110,7 @@ function isProductImage(path) {
 
 function mediaHTML(product) {
   const path = isProductImage(product.image) ? product.image : '';
-  if (path) return `<div class="product-photo-stage"><img width="1000" height="750" loading="lazy" decoding="async" src="${escapeHTML(path)}" alt="${escapeHTML(localProduct(product, 'name'))} rasmi" /></div>`;
+  if (path) return `<div class="product-photo-stage"><img width="1000" height="750" loading="lazy" decoding="async" src="/${escapeHTML(path)}" alt="${escapeHTML(localProduct(product, 'name'))} rasmi" /></div>`;
   return `<div class="product-placeholder"><i class="bi ${iconFor(product.category)}" aria-hidden="true"></i><span>FOTO KUTILMOQDA</span></div>`;
 }
 
@@ -211,7 +185,7 @@ function openDetails(id) {
   state.currentProductId = id;
   const specs = Array.isArray(p.specs) ? p.specs.filter((item) => typeof item === 'string').slice(0, 10) : [];
   const gallery = [p.image, ...(Array.isArray(p.additional_images) ? p.additional_images : [])].filter(isProductImage);
-  const galleryHTML = gallery.length > 1 ? `<div class="product-gallery">${gallery.map((path, i) => `<button type="button" class="gallery-thumb ${i === 0 ? 'active' : ''}" data-gallery-path="${escapeHTML(path)}" aria-label="${escapeHTML(localProduct(p, 'name'))}: ${i + 1}-rasm"><img src="${escapeHTML(path)}" alt="" loading="lazy" /></button>`).join('')}</div>` : '';
+  const galleryHTML = gallery.length > 1 ? `<div class="product-gallery">${gallery.map((path, i) => `<button type="button" class="gallery-thumb ${i === 0 ? 'active' : ''}" data-gallery-path="${escapeHTML(path)}" aria-label="${escapeHTML(localProduct(p, 'name'))}: ${i + 1}-rasm"><img src="/${escapeHTML(path)}" alt="" loading="lazy" /></button>`).join('')}</div>` : '';
   $('#productModalBody').innerHTML = `<div class="modal-product-layout"><div class="modal-product-image">${mediaHTML(p)}${galleryHTML}</div><div class="modal-product-info"><span class="modal-category">${escapeHTML(p.sku || 'OKA')} · ${escapeHTML(t(labelFor(p.category)))}${p.demo === true ? ' / NAMUNA' : ''}</span><h3 id="productModalTitle">${escapeHTML(localProduct(p, 'name'))}</h3><p>${escapeHTML(localProduct(p, 'description') || 'Batafsil tavsif kiritilmagan.')}</p><div class="modal-price"><small>KUNLIK IJARA</small><strong>${escapeHTML(formatPrice(typeof p.price_per_day === 'number' ? p.price_per_day : null))}</strong></div>${specs.length ? `<ul class="modal-specs">${specs.map((spec) => `<li>${escapeHTML(spec)}</li>`).join('')}</ul>` : '<p class="modal-hint">Texnik xususiyatlar faqat tasdiqlanganidan keyin qo‘shiladi.</p>'}${p.demo === true ? '<p class="modal-hint">Bu mahsulot kartasi namunaviy; apparatning aniq modeli, rasmi va mavjudligi hali tasdiqlanmagan.</p>' : ''}<button class="btn btn-accent modal-request" type="button" data-request="${escapeHTML(p.id)}">Shu uskuna uchun so‘rov <i class="bi bi-arrow-up-right"></i></button></div></div>`;
   const element = $('#productModal');
   if (window.bootstrap?.Modal) window.bootstrap.Modal.getOrCreateInstance(element).show();
@@ -391,7 +365,11 @@ async function submitInquiry(event) {
   button.disabled = true;
   button.innerHTML = ui('submitSending');
   try {
-    const response = await fetch('/api/inquiries', {
+    if (isStaticFrontend && !apiOrigin) {
+      throw new Error('Buyurtma serveri hali ulanmagan. Iltimos, filialga telefon qiling.');
+    }
+    status.textContent = ui('serverMayWake');
+    const response = await fetch(inquiryEndpoint, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
     });
     let result = {};
@@ -478,7 +456,7 @@ function wireEvents() {
     const galleryButton = event.target.closest('[data-gallery-path]');
     if (galleryButton && isProductImage(galleryButton.dataset.galleryPath)) {
       const photo = $('#productModalBody .modal-product-image .product-photo-stage img');
-      if (photo) photo.src = galleryButton.dataset.galleryPath;
+      if (photo) photo.src = `/${galleryButton.dataset.galleryPath}`;
       $('#productModalBody').querySelectorAll('.gallery-thumb').forEach((b) => b.classList.toggle('active', b === galleryButton));
     }
     if (event.target.closest('[data-bs-dismiss="modal"]') && !window.bootstrap?.Modal) {
@@ -486,6 +464,12 @@ function wireEvents() {
     }
   });
   $('#inquiryForm').addEventListener('submit', submitInquiry);
+  if (isStaticFrontend && apiOrigin) {
+    $('#inquiryForm').addEventListener('focusin', () => {
+      fetch(`${apiOrigin}/healthz`, { cache: 'no-store', mode: 'cors' }).catch(() => {});
+    }, { once: true });
+  }
+
   $('#year').textContent = new Date().getFullYear();
   const date = $('#rentalDate');
   date.addEventListener('input', () => {
@@ -504,12 +488,11 @@ function wireEvents() {
 }
 
 async function init() {
-  startPreloader();
   wireEvents();
   initScrollReveal();
   try { applyTheme(localStorage.getItem('oka-theme') || 'light'); } catch (_) { applyTheme('light'); }
   try {
-    const products = await readData('/api/products', 'data/products.json');
+    const products = await readData('/data/products.json');
     if (!Array.isArray(products)) throw new Error('Katalog formati noto‘g‘ri.');
     state.products = products.filter((p) => p && typeof p.id === 'string' && typeof p.name === 'string' && typeof p.category === 'string');
     drawProducts(); drawProductSelect();
@@ -517,14 +500,12 @@ async function init() {
     $('#productsGrid').innerHTML = `<div class="empty-state"><i class="bi bi-exclamation-triangle"></i>${escapeHTML(error.message)}</div>`;
     $('#resultsCount').textContent = '00';
   }
-  try { applySite(await readData('/api/site', 'data/site.json')); } catch (_) {  }
+  try { applySite(await readData('/data/site.json')); } catch (_) {  }
   refreshDynamicUI();
   observeReveal(document.querySelectorAll('.section-topline, .benefit, .steps article, .category-tile'));
-  stopPreloader();
 }
 
 document.addEventListener('DOMContentLoaded', init);
-window.addEventListener('load', () => setPreloaderProgress(96));
 
 document.addEventListener('oka:languagechange', () => {
   refreshThemeButtonLabel();

@@ -35,7 +35,48 @@ app = Flask(__name__, static_folder=None)
 app.json.ensure_ascii = False
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024
 
-SEO_PAGES = {'uz': ('PROKATCHI OKA ? Qurilish asboblari va texnikasi ijarasi | Toshkent', 'Toshkentda qurilish asboblari, elektr asboblar va maxsus texnika ijarasi. PROKATCHI OKA ? Gulzor va Ibn Sino filiallari. Katalogni ko?ring va so?rov yuboring.', 'uz_UZ', 'https://prokatchioka.uz/'), 'ru': ('?????? ???????????? ? ???????????? ??????? ? ???????? | PROKATCHI OKA', '?????? ???????????? ????????????, ??????????????????? ? ??????????? ? ????????. PROKATCHI OKA ? ??????? ??????? ? ??? ????. ??????? ? ?????? ??????.', 'ru_RU', 'https://prokatchioka.uz/ru/'), 'en': ('Construction Equipment & Tool Rental in Tashkent | PROKATCHI OKA', 'Construction equipment rental and power tool hire in Tashkent. Browse the PROKATCHI OKA catalog, then contact our Gulzor or Ibn Sino branch.', 'en_US', 'https://prokatchioka.uz/en/')}
+# Frontend CDN'ga ko'chganda brauzerdan kelgan buyurtma va healthz so'rovlariga CORS.
+# App baribir localhost va oldingi domenida ham ishlaydi.
+ALLOWED_FRONTEND_ORIGINS = {
+    'https://prokatchioka.uz',
+    'https://www.prokatchioka.uz',
+}
+extra_origin = os.getenv('FRONTEND_ORIGIN', '').strip().rstrip('/')
+if extra_origin.startswith('https://'):
+    ALLOWED_FRONTEND_ORIGINS.add(extra_origin)
+
+
+@app.after_request
+def allow_frontend_api(response):
+    if request.path.startswith('/api/') or request.path == '/healthz':
+        origin = request.headers.get('Origin', '')
+        if origin in ALLOWED_FRONTEND_ORIGINS:
+            response.headers['Access-Control-Allow-Origin'] = origin
+            response.headers['Vary'] = 'Origin'
+            response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+            response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    return response
+
+SEO_PAGES = {
+    'uz': (
+        'Qurilish asboblari ijarasi Toshkentda | PROKATCHI OKA',
+        'Toshkentda qurilish asboblari, elektr asboblari va texnika ijarasi. PROKATCHI OKA — Gulzor va Ibn Sino filiallari. Katalogni ko‘ring va so‘rov yuboring.',
+        'uz_UZ',
+        'https://prokatchioka.uz/',
+    ),
+    'ru': (
+        'Аренда инструментов в Ташкенте | PROKATCHI OKA',
+        'Аренда и прокат строительных инструментов, электроинструментов и техники в Ташкенте. PROKATCHI OKA — филиалы Гульзор и Ибн Сино. Каталог и заявка онлайн.',
+        'ru_RU',
+        'https://prokatchioka.uz/ru/',
+    ),
+    'en': (
+        'Tool & Construction Equipment Rental in Tashkent | PROKATCHI OKA',
+        'Construction tool hire and equipment rental in Tashkent. PROKATCHI OKA has Gulzor and Ibn Sino branches. Browse the catalog and send a rental inquiry online.',
+        'en_US',
+        'https://prokatchioka.uz/en/',
+    ),
+}
 
 DB_FILE = INSTANCE / "inquiries.sqlite3"
 DATABASE_URL = os.getenv("DATABASE_URL", "").strip()

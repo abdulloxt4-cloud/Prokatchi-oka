@@ -1164,21 +1164,20 @@
       button.setAttribute('aria-pressed',String(isActive));
     });
 
-    // SEO: Uzbek, Russian and English
     const seo={
       uz:{
-        title:'PROKATCHI OKA ? Qurilish asboblari va texnikasi ijarasi | Toshkent',
-        description:'Toshkentda qurilish asboblari, elektr asboblar va maxsus texnika ijarasi. PROKATCHI OKA ? Gulzor va Ibn Sino filiallari. Katalogni ko?ring va so?rov yuboring.',
+        title:'Qurilish asboblari ijarasi Toshkentda | PROKATCHI OKA',
+        description:'Toshkentda qurilish asboblari, elektr asboblari va texnika ijarasi. PROKATCHI OKA — Gulzor va Ibn Sino filiallari. Katalogni ko‘ring va so‘rov yuboring.',
         locale:'uz_UZ'
       },
       ru:{
-        title:'?????? ???????????? ? ???????????? ??????? ? ???????? | PROKATCHI OKA',
-        description:'?????? ???????????? ????????????, ??????????????????? ? ??????????? ? ????????. PROKATCHI OKA ? ??????? ??????? ? ??? ????. ??????? ? ?????? ??????.',
+        title:'Аренда инструментов в Ташкенте | PROKATCHI OKA',
+        description:'Аренда и прокат строительных инструментов, электроинструментов и техники в Ташкенте. PROKATCHI OKA — филиалы Гульзор и Ибн Сино. Каталог и заявка онлайн.',
         locale:'ru_RU'
       },
       en:{
-        title:'Construction Equipment & Tool Rental in Tashkent | PROKATCHI OKA',
-        description:'Construction equipment rental and power tool hire in Tashkent. Browse the PROKATCHI OKA catalog, then contact our Gulzor or Ibn Sino branch.',
+        title:'Tool & Construction Equipment Rental in Tashkent | PROKATCHI OKA',
+        description:'Construction tool hire and equipment rental in Tashkent. PROKATCHI OKA has Gulzor and Ibn Sino branches. Browse the catalog and send a rental inquiry online.',
         locale:'en_US'
       }
     }[lang];

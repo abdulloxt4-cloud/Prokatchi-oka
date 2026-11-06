@@ -6,3 +6,6 @@ instance/*
 !instance/.gitkeep
 .DS_Store
 .vscode/
+
+# Render static build output
+dist/
