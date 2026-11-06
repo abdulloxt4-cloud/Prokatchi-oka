@@ -35,6 +35,27 @@ app = Flask(__name__, static_folder=None)
 app.json.ensure_ascii = False
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024
 
+# Browser requests from the standalone static site and the production domain.
+# Restrict CORS to only our known public frontends.
+ALLOWED_FRONTEND_ORIGINS = {
+    "https://prokatchi-oka-static.onrender.com",
+    "https://prokatchioka.uz",
+    "https://www.prokatchioka.uz",
+}
+
+
+@app.after_request
+def allow_frontend_api(response):
+    if request.path.startswith("/api/") or request.path == "/healthz":
+        origin = request.headers.get("Origin", "")
+        if origin in ALLOWED_FRONTEND_ORIGINS:
+            response.headers["Access-Control-Allow-Origin"] = origin
+            response.headers["Vary"] = "Origin"
+            response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+            response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    return response
+
+
 SEO_PAGES = {'uz': ('PROKATCHI OKA ? Qurilish asboblari va texnikasi ijarasi | Toshkent', 'Toshkentda qurilish asboblari, elektr asboblar va maxsus texnika ijarasi. PROKATCHI OKA ? Gulzor va Ibn Sino filiallari. Katalogni ko?ring va so?rov yuboring.', 'uz_UZ', 'https://prokatchioka.uz/'), 'ru': ('?????? ???????????? ? ???????????? ??????? ? ???????? | PROKATCHI OKA', '?????? ???????????? ????????????, ??????????????????? ? ??????????? ? ????????. PROKATCHI OKA ? ??????? ??????? ? ??? ????. ??????? ? ?????? ??????.', 'ru_RU', 'https://prokatchioka.uz/ru/'), 'en': ('Construction Equipment & Tool Rental in Tashkent | PROKATCHI OKA', 'Construction equipment rental and power tool hire in Tashkent. Browse the PROKATCHI OKA catalog, then contact our Gulzor or Ibn Sino branch.', 'en_US', 'https://prokatchioka.uz/en/')}
 
 DB_FILE = INSTANCE / "inquiries.sqlite3"
