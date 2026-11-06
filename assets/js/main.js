@@ -46,17 +46,36 @@ const isStaticFrontend = window.PROKATCHI_STATIC_SITE === true;
 const inquiryEndpoint = `${apiOrigin}/api/inquiries`;
 
 const datePlaceholders = {
-  uz: {placeholder:'KK.OO.YYYY',hint:'Masalan: 27.10.2026',error:'Sanani KK.OO.YYYY shaklida kiriting.'},
-  ru: {placeholder:'ДД.ММ.ГГГГ',hint:'Например: 27.10.2026',error:'Введите дату в формате ДД.ММ.ГГГГ.'},
-  en: {placeholder:'DD/MM/YYYY',hint:'For example: 27/10/2026',error:'Enter a date in DD/MM/YYYY format.'}
+  uz: {hint:'Bugun: ',after:'. Bugungi yoki keyingi sanani tanlang.',error:'Sanani kalendardan to‘g‘ri tanlang.',past:'O‘tgan sanani tanlamang.'},
+  ru: {hint:'Сегодня: ',after:'. Выберите сегодняшнюю или будущую дату.',error:'Выберите корректную дату в календаре.',past:'Нельзя выбрать прошедшую дату.'},
+  en: {hint:'Today: ',after:'. Choose today or a future date.',error:'Select a valid date from the calendar.',past:'Please choose today or a future date.'}
 };
+function tashkentTodayISO() {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone:'Asia/Tashkent', year:'numeric', month:'2-digit', day:'2-digit'
+  }).formatToParts(new Date());
+  const get = (type) => parts.find((part) => part.type === type)?.value || '';
+  return `${get('year')}-${get('month')}-${get('day')}`;
+}
+function refreshDateMinimum(fillEmpty = false) {
+  const input = $('#rentalDate');
+  const today = tashkentTodayISO();
+  if (input) {
+    input.min = today;
+    if (fillEmpty && !input.value) input.value = today;
+  }
+  return today;
+}
 function dateForServer(value) {
   const input = String(value || '').trim();
   if (!input) return '';
+  const iso = input.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   const compact = input.match(/^(\d{2})(\d{2})(\d{4})$/);
   const match = compact || input.match(/^(\d{1,2})[.\/-](\d{1,2})[.\/-](\d{4})$/);
-  if (!match) return null;
-  const d = Number(match[1]), m = Number(match[2]), y = Number(match[3]);
+  if (!iso && !match) return null;
+  const d = Number(iso ? iso[3] : match[1]);
+  const m = Number(iso ? iso[2] : match[2]);
+  const y = Number(iso ? iso[1] : match[3]);
   const date = new Date(Date.UTC(y, m - 1, d));
   if (date.getUTCFullYear() !== y || date.getUTCMonth() !== m - 1 || date.getUTCDate() !== d) return null;
   return `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
@@ -67,10 +86,9 @@ function dateError() {
 function refreshDateHint() {
   const lang = window.I18N?.lang || 'uz';
   const labels = datePlaceholders[lang] || datePlaceholders.uz;
-  const input = $('#rentalDate');
-  if (input) input.placeholder = labels.placeholder;
+  const today = refreshDateMinimum();
   const hint = $('#dateHelp');
-  if (hint) hint.textContent = labels.hint;
+  if (hint) hint.textContent = labels.hint + today.split('-').reverse().join('.') + labels.after;
 }
 
 let revealObserver = null;
@@ -333,6 +351,7 @@ function showSuccessModal() {
 async function submitInquiry(event) {
   event.preventDefault();
   const form = event.currentTarget;
+  const today = refreshDateMinimum();
   const status = $('#formStatus');
   status.className = 'form-status';
   status.textContent = '';
@@ -350,9 +369,10 @@ async function submitInquiry(event) {
     website: $('#companyWebsite').value,
     consent: $('#privacyConsent').checked
   };
-  if ($('#rentalDate').value.trim() && !payload.rental_date) {
+  if ($('#rentalDate').value.trim() && (!payload.rental_date || payload.rental_date < today)) {
     status.classList.add('error');
-    status.textContent = dateError();
+    const labels = datePlaceholders[window.I18N?.lang || 'uz'] || datePlaceholders.uz;
+    status.textContent = payload.rental_date && payload.rental_date < today ? labels.past : dateError();
     $('#rentalDate').focus();
     return;
   }
@@ -376,6 +396,8 @@ async function submitInquiry(event) {
     try { result = await response.json(); } catch (_) {  }
     if (!response.ok || !result.ok) throw new Error(result.error || 'Server so‘rovni qabul qilmadi.');
     form.reset();
+    refreshDateMinimum(true);
+    refreshDateHint();
     showSuccessModal();
   } catch (error) {
     status.classList.add('error');
@@ -472,12 +494,8 @@ function wireEvents() {
 
   $('#year').textContent = new Date().getFullYear();
   const date = $('#rentalDate');
-  date.addEventListener('input', () => {
-    const digits = date.value.replace(/\D/g, '').slice(0, 8);
-    if (digits.length > 4) date.value = `${digits.slice(0, 2)}.${digits.slice(2, 4)}.${digits.slice(4)}`;
-    else if (digits.length > 2) date.value = `${digits.slice(0, 2)}.${digits.slice(2)}`;
-    else date.value = digits;
-  });
+  refreshDateMinimum(true);
+  date.addEventListener('focus', () => { refreshDateMinimum(); refreshDateHint(); });
 
   document.querySelectorAll('#mainNav .nav-link').forEach((link) => link.addEventListener('click', () => {
     const collapsible = $('#mainNav');

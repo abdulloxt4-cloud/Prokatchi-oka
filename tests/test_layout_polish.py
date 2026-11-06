@@ -41,9 +41,11 @@ class LayoutPolishTests(unittest.TestCase):
         self.assertIn('prefers-reduced-motion:reduce', CSS)
 
     def test_date_localized_and_form_copy(self):
-        self.assertIn('KK.OO.YYYY', MAIN)
-        self.assertIn('ДД.ММ.ГГГГ', MAIN)
-        self.assertIn('DD/MM/YYYY', MAIN)
+        self.assertIn('type="date"', HTML)
+        self.assertIn('tashkentTodayISO', MAIN)
+        self.assertIn('refreshDateMinimum(true)', MAIN)
+        self.assertIn("timeZone:'Asia/Tashkent'", MAIN)
+        self.assertNotIn('27.10.2026', MAIN)
         self.assertIn('So‘rovingiz operator tomonidan tasdiqlanadi.', HTML)
         self.assertNotIn('Ma’lumotlaringiz Flask serverdagi bazaga saqlanadi;', HTML)
         self.assertIn('Your request will be confirmed by an operator.', I18N)
